@@ -1,0 +1,439 @@
+<html>
+
+<head>
+  <title></title>
+  <meta content="">
+  <link href="style2.css" rel="stylesheet" type="text/css" media="all">
+  <body style="background-color:0F0F0F;">
+  <style>
+  body {
+  color: #961bff
+  }
+  </style>
+
+* = Opcional.<br>
+<br>
+<a style="color:#FFFFFF">Utilidades</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg0</th>
+	  <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$version</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra a versão do bot e suas dependências.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$invite</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Link para convidar o bot para seu grupo do discord.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$ajuda</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Link que mostra cada comando e função do bot.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$getmap</td>
+      <td>NomeDoMapa ou *</td>
+	  <td></td>
+	  <td></td>
+	  <td>Busca links para os mapas do servidor SVB.</td>
+	  <td>$getmap coni</td>
+    </tr>
+	<tr>
+      <td>$echo</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$crypto</td>
+      <td>Tamanho</td>
+	  <td></td>
+	  <td></td>
+	  <td>Gera uma string com letras e números aleatórios.</td>
+	  <td>$crypto 32</td>
+    </tr>
+	<tr>
+      <td>$ping</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra o ping do bot e api do discord.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$say</td>
+      <td>Mensagem</td>
+	  <td></td>
+	  <td></td>
+	  <td>Faz o bot falar sua mensagem em uma embed.</td>
+	  <td>$say :flushed:</td>
+    </tr>
+	<tr>
+      <td>$math</td>
+      <td>Conta</td>
+	  <td></td>
+	  <td></td>
+	  <td>Calcula e manda o resultado da conta inserida.</td>
+	  <td>$math 1+1</td>
+    </tr>
+	<tr>
+      <td>$convert</td>
+      <td>Moeda1</td>
+	  <td>Moeda2</td>
+	  <td>Valor</td>
+	  <td>Converte Valor da Moeda1 para Moeda2.</td>
+	  <td>$convert USD BRL 1</td>
+    </tr>
+	<tr>
+      <td>$convertbtc</td>
+      <td>CryptoMoeda</td>
+	  <td>Moeda</td>
+	  <td>Valor</td>
+	  <td>Converte Valor da CryptoMoeda para Moeda.</td>
+	  <td>$convert BTC USD 1</td>
+    </tr>
+	<tr>
+      <td>$mem</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra a memória utilizada pelo bot.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$time</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra o horário atual do bot.</td>
+	  <td></td>
+    </tr>
+</table>
+
+<br>
+<a style="color:#FFFFFF">Steam-API</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg0</th>
+	  <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$steam</td>
+      <td>CustomURL ou ID ou URL</td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra informações sobre a conta steam do usuário.</td>
+	  <td>$steam coralinecat</td>
+    </tr>
+	<tr>
+      <td>$workshop</td>
+      <td>ID ou URL</td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra informações sobre o item na workshop.</td>
+	  <td>$workshop 220</td>
+    </tr>
+</table>
+
+<br>
+<a style="color:#FFFFFF">Economia</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Arg3</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$slot</td>
+      <td>Quantidade ou Tudo</td>
+	  <td></td>
+	  <td></td>
+	  <td>Aposta seu dinheiro em uma slot machine virtual.</td>
+	  <td>$slot 100</td>
+    </tr>
+	<tr>
+      <td>$slot3</td>
+      <td>Quantidade ou Tudo</td>
+	  <td></td>
+	  <td></td>
+	  <td>Aposta seu dinheiro em uma slot machine x3 virtual.</td>
+	  <td>$slot3 100</td>
+    </tr>
+	<tr>
+      <td>$top</td>
+      <td>Página*</td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra os usuários com mais coins.</td>
+	  <td>$top 1</td>
+    </tr>
+	<tr>
+      <td>$inventory</td>
+      <td>ID*</td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra seu inventário.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$points</td>
+      <td>ID*</td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra seus pontos.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$invest</td>
+      <td>Mercado (Símbolo)</td>
+	  <td>Valor</td>
+	  <td></td>
+	  <td>Investe seus pontos em mercados de estoques.</td>
+	  <td>$invest GOOG 100</td>
+    </tr>
+	<tr>
+      <td>$sell</td>
+      <td>Mercado (Símbolo)</td>
+	  <td>Valor*</td>
+	  <td></td>
+	  <td>Vende seus estoques.</td>
+	  <td>$sell GOOG 100</td>
+    </tr>
+	<tr>
+      <td>$check</td>
+      <td>Mercado (Símbolo)</td>
+	  <td></td>
+	  <td></td>
+	  <td>Checa como está o valor do mercado de estoques escolhido.</td>
+	  <td>$check GOOG</td>
+    </tr>
+	<tr>
+      <td>$tamanho</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Gera o tamanho de sua torneira.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$toptamanho</td>
+      <td>Página*</td>
+	  <td></td>
+	  <td></td>
+	  <td>Checa o valor das torneiras de outras pessoas.</td>
+	  <td>$toptamanho 1</td>
+    </tr>
+</table>
+
+<br>
+<a style="color:#FFFFFF">Fun</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg0</th>
+	  <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$cringe</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$sai</td>
+      <td>Mention ou ID</td>
+	  <td></td>
+	  <td></td>
+	  <td>Manda o usuário sair do seu jogo ou status no discord.</td>
+	  <td>$sai @Desastre</td>
+    </tr>
+	<tr>
+      <td>$random</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra um usuário aleatório no discord.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$eprarir</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Usa algoritmos quânticos para determinar se foi engraçado ou não.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$epradebochar</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Usa algoritmos quânticos para determinar se é pra debochar ou não.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$meow</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra a imagem de um gato via thecatapi.</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$auau</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td>Mostra a imagem de um cachorro via thecatapi</td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>@Mention</td>
+      <td>Mensagem</td>
+	  <td></td>
+	  <td></td>
+	  <td>Conversa com o bot.</td>
+	  <td></td>
+    </tr>
+</table>
+
+<br>
+<a style="color:#FFFFFF">Request</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg0</th>
+	  <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$request</td>
+      <td>Programa</td>
+	  <td>Compatibilidade</td>
+	  <td></td>
+	  <td>Faz o bot compilar o programa com compatibilidade definida.</td>
+	  <td>$request p src</td>
+    </tr>
+</table>
+
+<br>
+<a style="color:#FFFFFF">Admin</a></em><br>
+<br>
+<table style="background-color:#000000;color:BFBFBF;">
+    <tr  style="color:#FFFFFF">
+      <th>Comando</th>
+      <th>Arg0</th>
+	  <th>Arg1</th>
+	  <th>Arg2</th>
+	  <th>Responsável</th>
+	  <th>Exemplo</th>
+	</tr>
+    <tr>
+      <td>$die</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$antirp</td>
+      <td>Mention ou ID</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$join</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$leave</td>
+      <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$psay</td>
+      <td>GuildID</td>
+	  <td>ChannelID</td>
+	  <td>Mensagem</td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$react</td>
+      <td>Link ou GuildID</td>
+	  <td>ChannelID*</td>
+	  <td>MessageID*</td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$delete</td>
+      <td>Link ou GuildID</td>
+	  <td>ChannelID*</td>
+	  <td>MessageID*</td>
+	  <td></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>$leave2</td>
+      <td>ID</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+</table>
+
+</head>
+
+<body></body>
+
+</html>
