@@ -27,3 +27,18 @@
 | $steamfriends | Link ou ID | Gera um embed com os amigos banidos da conta inserida. |
 | $workshop | Link ou ID | Gera um embed com informações do item da workshop inserido. |
 
+### Economy
+
+| Comando | Argumentos | Responsável |
+|:------- |:---------- |:----------- |
+| $roleta | Quantidade | Aposta seu dinheiro em uma slot machine virtual. |
+| $roll3 | Quantidade | Aposta seu dinheiro em uma slot machine virtual com 9 slot. |
+| $top | Página | Top 10 usuários com mais coins. |
+| $inventario | | Mostra seu inventário. |
+| $pontos | | Mostra quantos pontos você tem. |
+| $investir | Mercado Quantidade | Investe suas coins em um mercado financeiro. |
+| $vender | Mercado Quantidade | Vende suas coins investidas no mercado. |
+| $checar | Mercado | Mostra informações do mercado. |
+| $tamanho | | Mostra o tamanho de sua torneira virtual. |
+| $toptamanho | | Top 10 usuários com maior torneiras virtuais. |
+
