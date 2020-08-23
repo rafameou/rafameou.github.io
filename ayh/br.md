@@ -3,7 +3,7 @@
 ## Utilidades
 
 | Comando | Argumentos | Responsável |
-|:------- | -----:----- | -----------:|
+|:---     |    :---:   |         ---:|
 | $version | | Mostra versão do bot, seu uso de memória ram e suas dependências. |
 | $invite | | Gera um link que deixa você convidar o bot para outro servidor do discord. |
 | $ajuda | | Exibe links para ajuda, termos de serviço e outros do bot. |
@@ -22,7 +22,7 @@
 ## Steam
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $steam | Link ou ID | Gera um embed com informações da conta inserida. |
 | $steamfriends | Link ou ID | Gera um embed com os amigos banidos da conta inserida. |
 | $workshop | Link ou ID | Gera um embed com informações do item da workshop inserido. |
@@ -30,7 +30,7 @@
 ## Economy
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $roleta | Quantidade | Aposta seu dinheiro em uma slot machine virtual. |
 | $roll3 | Quantidade | Aposta seu dinheiro em uma slot machine virtual com 9 slot. |
 | $top | Página | Top 10 usuários com mais coins. |
@@ -45,7 +45,7 @@
 ## Fun
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $repost | | Manda uma mensagem de apoio para a pessoa que acabou de fazer um repost. |
 | $damedane | | *pomfp* na mesa. |
 | $cringe | | Manda uma mensagem de apoio para a pessoa que acabou de postar cringe. |
@@ -60,13 +60,13 @@
 ## Configurações do usuário
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $user_react | | Desativa as reações do bot (você não vai ganhar nenhuma medalha nem coins). |
 
 ## Configurações do servidor (Apenas administrador)
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $set_prefix | Prefix | Muda o prefix do bot no servidor atual. |
 | $set_lang | Língua | Muda a linguagem do bot. |
 | $set_react | | Desativa as reações do bot no servidor (nenhum usuário vai ganhar medalhas e coins) |
@@ -74,14 +74,14 @@
 ## Booru
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $e926 | Argumentos | Pesquisa seus argumentos no e926. |
 | $safebooru | Argumentos | Pesquisa seus argumentos no safebooru. |
 
 ## NSFW
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:---     |    :---:   |         ---:|
 | $e621 | Argumentos | Pesquisa seus argumentos no e621. |
 | $hypnohub | Argumentos | Pesquisa seus argumentos no hypnohub. |
 | $danbooru | Argumentos | Pesquisa seus argumentos no danbooru. |
