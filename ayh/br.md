@@ -1,11 +1,9 @@
 # Comandos do bot. 
 
-:suspect:
-
 ## Utilidades
 
 | Comando | Argumentos | Responsável |
-|:------- |:---------- |:----------- |
+|:------- | -----:----- | -----------:|
 | $version | | Mostra versão do bot, seu uso de memória ram e suas dependências. |
 | $invite | | Gera um link que deixa você convidar o bot para outro servidor do discord. |
 | $ajuda | | Exibe links para ajuda, termos de serviço e outros do bot. |
