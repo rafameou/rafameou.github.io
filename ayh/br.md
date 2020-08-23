@@ -1,6 +1,8 @@
-# Comandos do bot. :suspect:
+# Comandos do bot. 
 
-### Utilidades
+:suspect:
+
+## Utilidades
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
@@ -19,7 +21,7 @@
 | $convert | CryptoMoeda Moeda Valor | Converte valor de crypto moeda para moeda real. |
 | $time | | Mostra horário atual do bot. |
 
-### Steam
+## Steam
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
@@ -27,7 +29,7 @@
 | $steamfriends | Link ou ID | Gera um embed com os amigos banidos da conta inserida. |
 | $workshop | Link ou ID | Gera um embed com informações do item da workshop inserido. |
 
-### Economy
+## Economy
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
@@ -42,7 +44,7 @@
 | $tamanho | | Mostra o tamanho de sua torneira virtual. |
 | $toptamanho | | Top 10 usuários com maior torneiras virtuais. |
 
-### Fun
+## Fun
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
@@ -57,13 +59,13 @@
 | $auau | | Pega uma imagem aleatória de um cachorrinho. |
 | $texttowav | Língua Frase | Gera um .wav contendo a sua frase. |
 
-### Configurações do usuário
+## Configurações do usuário
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
 | $user_react | | Desativa as reações do bot (você não vai ganhar nenhuma medalha nem coins). |
 
-### Configurações do servidor (Apenas administrador)
+## Configurações do servidor (Apenas administrador)
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
@@ -71,14 +73,14 @@
 | $set_lang | Língua | Muda a linguagem do bot. |
 | $set_react | | Desativa as reações do bot no servidor (nenhum usuário vai ganhar medalhas e coins) |
 
-### Booru
+## Booru
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
 | $e926 | Argumentos | Pesquisa seus argumentos no e926. |
 | $safebooru | Argumentos | Pesquisa seus argumentos no safebooru. |
 
-### NSFW
+## NSFW
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
