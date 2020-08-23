@@ -10,7 +10,7 @@
 | $instagram | Link | Baixa o vídeo ou imagem contida no link. |
 | $embed | Opções | Faz uma "embed" personalizada. |
 | $getmap | * (todos) ou nome | Faz uma pesquisa e exibe os mapas do servidor dos brothers. |
-| $echo | | |
+| $echo | | [object Object] |
 | $crypto | Quantidade | Gera uma string com números e letras aleatórios. |
 | $ping | | Mostra a latência do bot. |
 | $say | Frase | Faz o bot exibir sua frase numa embed. |
@@ -19,10 +19,11 @@
 | $convert | CryptoMoeda Moeda Valor | Converte valor de crypto moeda para moeda real. |
 | $time | | Mostra horário atual do bot. |
 
-### Utilidades
+### Steam
 
 | Comando | Argumentos | Responsável |
 |:------- |:---------- |:----------- |
 | $steam | Link ou ID | Gera um embed com informações da conta inserida. |
 | $steamfriends | Link ou ID | Gera um embed com os amigos banidos da conta inserida. |
 | $workshop | Link ou ID | Gera um embed com informações do item da workshop inserido. |
+
