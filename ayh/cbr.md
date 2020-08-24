@@ -62,7 +62,8 @@
 
 | Comando | Argumentos | Responsável |
 |:---     |    :---:   |         ---:|
-| $user_react | | Desativa as reações do bot (você não vai ganhar nenhuma medalha nem coins). |
+| $user_react | | Desativa as reações do bot. |
+| $user_medals | | Desativa as medals e coins do bot (você não vai ganhar nenhuma medalha nem coins). |
 
 ## Configurações do servidor (Apenas administrador)
 
@@ -70,7 +71,8 @@
 |:---     |    :---:   |         ---:|
 | $set_prefix | Prefix | Muda o prefix do bot no servidor atual. |
 | $set_lang | Língua | Muda a linguagem do bot. |
-| $set_react | | Desativa as reações do bot no servidor (nenhum usuário vai ganhar medalhas e coins) |
+| $set_react | | Desativa as reações do bot no servidor. |
+| $set_medals | | Desativa as medals e coins do bot no servidor (nenhum usuário vai ganhar medalhas e coins). |
 
 ## Booru
 
