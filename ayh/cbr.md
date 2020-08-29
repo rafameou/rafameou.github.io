@@ -1,4 +1,4 @@
-# Comandos do bot. 
+# Comandos do bot para a versão 1.10.9X (1.11) 
 
 ## Utilidades
 
@@ -42,6 +42,8 @@
 | $checar | Mercado | Mostra informações do mercado. |
 | $tamanho | | Mostra o tamanho de sua torneira virtual. |
 | $toptamanho | | Top 10 usuários com maior torneiras virtuais. |
+| $chifre | | Mostra o tamanho do seu chifre virtual. |
+| $topchifre | | Top 10 usuários com maior chifres virtuais. |
 
 ## Fun
 
@@ -62,7 +64,7 @@
 
 | Comando | Argumentos | Responsável |
 |:---     |    :---:   |         ---:|
-| $user_react | | Desativa as reações do bot. |
+| $user_react | | Ativa/Desativa as reações do bot. |
 | $user_medals | | Desativa as medals e coins do bot (você não vai ganhar nenhuma medalha nem coins). |
 
 ## Configurações do servidor (Apenas administrador)
@@ -71,7 +73,6 @@
 |:---     |    :---:   |         ---:|
 | $set_prefix | Prefix | Muda o prefix do bot no servidor atual. |
 | $set_lang | Língua | Muda a linguagem do bot. |
-| $set_react | | Desativa as reações do bot no servidor. |
 | $set_medals | | Desativa as medals e coins do bot no servidor (nenhum usuário vai ganhar medalhas e coins). |
 
 ## Booru
