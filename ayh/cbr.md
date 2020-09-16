@@ -1,4 +1,4 @@
-# Comandos do bot para a versão 1.10.9X (1.11) 
+# Comandos do bot para a versão 2.0.96 
 
 ## Utilidades
 
@@ -19,6 +19,25 @@
 | $convert | Moeda1 Moeda2 Valor | Converte valor de moeda1 para moeda2. |
 | $convert | CryptoMoeda Moeda Valor | Converte valor de crypto moeda para moeda real. |
 | $time | | Mostra horário atual do bot. |
+| $clima | Cidade | Mostra o clima atual da cidade escolhida. |
+| $ddg | Conteúdo | Pesquisa o conteúdo no duckduckgo. |
+| $valvedev | Conteúdo | Pesquisa o conteúdo na wiki do Valve Developer Community. |
+| $discordstatus | | Mostra o status do discord. |
+
+## Imagem
+
+| Comando | Argumentos | Responsável |
+|:---     |    :---:   |         ---:|
+| $invert | Mention ou Imagem ou ID | Inverte as cores da imagem. |
+| $greyscale | Mention ou Imagem ou ID | Faz a imagem ficar cinza. |
+| $flip | Mention ou Imagem ou ID | Inverte horizontalmente a imagem. |
+| $flipv | Mention ou Imagem ou ID | Inverte verticalmente a imagem. |
+| $rotate | Mention ou Imagem ou ID | Rotaciona a imagem. |
+| $crop | Mention ou Imagem ou ID X Y W H | Corta a imagem. |
+| $fade | Mention ou Imagem ou ID | Altera a opacidade da imagem. |
+| $blur | Mention ou Imagem ou ID | Desfoca a imagem. |
+| $write | Mention ou Imagem ou ID Mensagem | Escreve uma mensagem na imagem. |
+| $resize | Mention ou Imagem ou ID W H | Muda a resolução da imagem para W por H. |
 
 ## Steam
 
@@ -59,6 +78,9 @@
 | $meow | | Pega uma imagem aleatória de um gatinho. |
 | $auau | | Pega uma imagem aleatória de um cachorrinho. |
 | $texttowav | Língua Frase | Gera um .wav contendo a sua frase. |
+| $mbtts | Língua Frase | Gera um .wav contendo a sua frase na engine do DecTalk. |
+| $samtts | Língua Frase | Gera um .wav contendo a sua frase na engine do Software Automatic Mouth. |
+| $gerador | | Gera uma frase aleatória com palavras da língua portuguesa. |
 
 ## Configurações do usuário
 
