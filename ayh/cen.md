@@ -20,6 +20,23 @@
 | $convert | Currency1 Currency2 Value | Converts the value from Currency1 to Currency2. |
 | $convert | CryptoCurrency Currency Value | Converts the value from the crypto-currency to real currency. |
 | $time | | Returns the bot's local time. |
+| $clima | City | Returns the current weather in the city. |
+| $ddg | Content | Searches for the content through duckduckgo. |
+| $valvedev | Content | Searches for the content in the Valve Developer Community wiki. |
+| $discordstatus | | Returns discord's status. |
+
+## Image
+
+| $invert | Mention/Image/ID | Invert the image's colors. |
+| $greyscale | Mention/Image/ID | Turns an image into grayscale. |
+| $flip | Mention/Image/ID | Inverts the image horizontally. |
+| $flipv | Mention/Image/ID | Inverts the image vertically. |
+| $rotate | Mention/Image/ID | Rotates the image. |
+| $crop | Mention/Image/ID X Y W H | Crops the image. |
+| $fade | Mention/Image/ID | Changes the image's opacity. |
+| $blur | Mention/Image/ID | Blurs the image. |
+| $write | Mention/Image/ID Message | Writes a message on the image. |
+| $resize | Mention/Image/ID W H | Changes the image's resolution to W x H. |
 
 ## Steam
 
@@ -60,6 +77,9 @@
 | $meow | | Prints a random image of a kitty. |
 | $auau | | Prints a random image of a doggy. |
 | $texttowav | Language Text | Sends a text-to-speech .wav of the provided text. |
+| $mbtts | Language Text | Returns a tts .wav of the text through DecTalk. |
+| $samtts | Language Text | Returns a tts .wav of the text through Software Automatic Mouth. |
+| $gerador | | Generates random text with portuguese words. |
 
 ## User's config
 
