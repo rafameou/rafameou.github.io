@@ -1,0 +1,137 @@
+# creds https://gist.github.com/HardenedArray/31915e3d73a4ae45adc0efa9ba458b07
+# pfv n use, use o acima obg
+
+gdisk /dev/sda
+# n = novo
+# p = check
+# w = escrever
+# sda1 = +100 MiB EFI partition # Hex code EF00
+# sda2 = +250MiB Boot partition # Hex code 8300
+# sda3 = DEFAULT # Hex code 8300. 
+
+###### formatando
+
+mkfs.vfat -F 32 /dev/sda1
+mkfs.ext4 /dev/sda2
+
+###### encryptando e formatando, also pode mudar o ModeloArch pra qlqr coisa
+
+cryptsetup -c aes-xts-plain64 -h sha512 -s 512 --use-random luksFormat /dev/sda3 
+cryptsetup luksOpen /dev/sda3 ModeloArch
+
+pvcreate /dev/mapper/ModeloArch
+vgcreate Arch /dev/mapper/ModeloArch
+# muda o valor do swap pra qnt vc quiser
+lvcreate -L +8000M Arch -n swap
+lvcreate -l +100%FREE Arch -n root
+
+mkswap /dev/mapper/Arch-swap
+mkfs.ext4 /dev/mapper/Arch-root
+
+###### dando mount pra dar chroot  
+
+mount /dev/mapper/Arch-root /mnt
+swapon /dev/mapper/Arch-swap
+mkdir /mnt/boot
+mount /dev/sda2 /mnt/boot
+mkdir /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
+
+###### boa hora pra mudar a mirrorlist
+
+nano /etc/pacman.d/mirrorlist
+
+# Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
+# Server = http://www.caco.ic.unicamp.br/archlinux/
+# Server = http://mirror.ufam.edu.br/archlinux/
+
+###### instalando arch
+
+pacstrap /mnt base base-devel grub efibootmgr dialog wpa_supplicant linux linux-headers nano dhcpcd iwd lvm2 linux-firmware
+genfstab -U /mnt >> /mnt/etc/fstab 
+arch-chroot /mnt /bin/bash
+
+###### muda pra timezone q vc quiser
+
+ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+hwclock --systohc
+
+###### ativa o iwd pra wifi em laptop
+
+systemctl enable iwd
+
+###### seta o hostname, pode mudar pra qlqr merda
+
+echo modelo-arch > /etc/hostname
+
+###### muda o locale
+
+nano locale.gen
+nano locale.conf
+
+locale-gen
+
+###### seta a senha do root e faz o usuario, muda o USER pra outro
+
+passwd
+
+useradd -m -G wheel -s /bin/bash USER
+
+passwd USER
+
+###### modifica o seu mkinitcpio pra ele poder descryptar
+
+nano /etc/mkinitcpio.conf
+# HOOKS=(base udev autodetect modconf block keymap encrypt lvm2 resume filesystems keyboard fsck)
+
+mkinitcpio -p linux
+
+###### instala o grub
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
+
+grub-install --target=i386-pc /dev/sda2
+
+##### muda as config do grub pra aceitar o encrypt
+
+nano /etc/default/grub
+# GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:ModeloArch resume=/dev/mapper/Arch-swap"
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+##### instala o networkmanager, xorg, dkms e  gnome
+
+pacman -S networkmanager xorg xorg-xinit dkms xorg-apps ttf-dejavu ttf-libertaion 
+
+systemctl enable NetworkManager
+
+pacman -S gnome gdm
+
+systemctl enable gdm
+
+###### seta o sudoers
+
+nano /etc/sudoers 
+USER ALL=(ALL) ALL
+
+##### da unmount e quita
+
+umount -R /mnt
+swapoff -a
+
+############### instla yay
+
+sudo pacman -S git go
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+########### outras repos
+
+[chaotic-aur]
+# Brazil
+Server = https://lonewolf.pedrohlc.com/$repo/$arch
+# USA
+Server = https://builds.garudalinux.org/repos/$repo/$arch
+Server = https://repo.kitsuna.net/$arch
+
