@@ -1,9 +1,20 @@
+# ~ # Esse txt existe caso eu esqueça de algo no meio da instalação, faz mt tempo q não reinstalo o arch ent as vezes ele fica meio desatualizado.
+
+# ~ # essa é minha versão modificada desse gist, use o original no link abaixo
 # ~ # that's my modified version of this gist, please use the original below instead.
 # ~ # creds https://gist.github.com/HardenedArray/31915e3d73a4ae45adc0efa9ba458b07
 
+# ~ # Melhor ainda seria usar a wiki para isso, sempre tem as informações mais atualizadas lá:
+# ~ # https://wiki.archlinux.org/index.php/Installation_guide
+# ~ # https://wiki.archlinux.org/index.php/Dm-crypt
+# ~ # https://wiki.archlinux.org/index.php/LVM
+
+# ~ # modifique para seu username, e seu hostname no arquivo inteiro
 # USER
 # ModeloArch
 # modelo-arch
+
+# ~ # Use fdisk se tiver em MBR.
 
 gdisk /dev/sda
 # n = novo
@@ -107,15 +118,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # ~ # instala o networkmanager, xorg, dkms e  gnome
 
-pacman -S networkmanager xorg xorg-xinit dkms xorg-apps ttf-dejavu ttf-liberation gnome gdm gnome-flashback gnome-applets sensors-applet network-manager-applet
+pacman -S networkmanager xorg xorg-xinit dkms xorg-apps ttf-dejavu ttf-liberation plasma kde-applications network-manager-applet
 
-# no extra:
-# 1-20 22-23 35-37 39-56 58-64 66 
+systemctl enable NetworkManager sddm
 
-systemctl enable NetworkManager gdm
+# ~ # Ative a repo do chaotic-aur agora -> https://aur.chaotic.cx/
 
-# ~ # instala uns spyware top e telegram :)
-pacman -S chromium discord telegram-desktop
+# ~ # instala uns spyware top, telegram e paru pra suporte de aur.
+pacman -S firefox-appmenu discord-canary telegram-desktop paru
 
 # ~ # seta o sudoers
 
@@ -128,11 +138,4 @@ umount -R /mnt
 swapoff -a
 
 # reboot
-
-# ~ # instala yay
-
-sudo pacman -S git go
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
 
