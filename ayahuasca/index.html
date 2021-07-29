@@ -14,38 +14,38 @@
 <hr>
 
 <h3 id="faq">FAQ</h3>
-<b id="wiab">What is ayahuasca bot?</b>
+<h4 id="wiab">What is ayahuasca bot?</h4>
 <p>Ayahuasca is a simple discord bot that is not focused on being better or replacing others, just a small project to waste your and my time meanwhile having fun.</p>
-<b id="wdtncf">Where does the name come from?</b>
+<h4 id="wdtncf">Where does the name come from?</h4>
 <p>The name ayahuasca comes from a south american psychoactive brew that can cause psychedelic effects and is used as a spiritual medicine by the indigenous peoples and other religions, you can read more about it <a href="https://en.wikipedia.org/wiki/Ayahuasca">here</a>. And no, I have never used it, but I think it's a beautiful example of culture, specially of south america.</p>
-<b id="hciitbtms">How can I invite the bot to my server?</b>
+<h4 id="hciitbtms">How can I invite the bot to my server?</h4>
 <p>You can invite the bot clicking on this <a href="https://discord.com/api/oauth2/authorize?client_id=376358904252334080&permissions=0&scope=bot">link</a>, you may need to login into your discord account. Please note that i'm currently hosting the bot on a Raspberry PI 3B, so it is little bit slow.</p>
-<b id="wdtbs">Does the bot store any type of data (messages, images, etc)?</b>
-<p>No, but yes. The bot will store images that are used with the <a href="#image">image commands</a> and then get discarded at 3PM UTC, user ids will also be stored for the <a href="#economy">economy commands</a>. Messages and other data will be always discarded after the command function has finished. However since the bot is currently closed-source and running on my own server, you will have to take my word for it.</p>
+<h4 id="wdtbs">Does the bot store any type of data (messages, images, etc)?</h4>
+<p>No, but yes. The bot will store images that are used with the <a href="#image">image commands</a> and discard all at 3PM UTC, user ids will also be stored for the <a href="#economy">economy commands</a>. Messages and other data will be always discarded after the command function has finished. However since the bot is currently closed-source and running on my own server, you will have to take my word for it.</p>
 
 <hr>
 
 <h3 id="cmd">Commands</h3>
 <style> table, th, td { border: 1px solid black; border-collapse: collapse;} </style>
-<b id="utility">Utility</b>
+<h4 id="utility">Utility</h4>
 <table>
-    <tr><th>Command</th><th>Arguments</th><th>Description</th></tr>
-    <tr><th>version</th><th></th><th>Show's the bot's version, dependencies and memory usage.</th></tr>
-    <tr><th>invite</th><th></th><th>Generates a discord invite link to add the bot to your server.</th></tr>
-    <tr><th>help</th><th></th><th>Shows links to the bot's help page, terms of service and others.</th></tr>
-    <!--<tr><th>instagram</th><th>Link</th><th>Downloads the image or video in the provided Instragram link.</th></tr></hidden>-->
+	<tr><th>Command</th><th>Arguments</th><th>Description</th></tr>
+	<tr><th>version</th><th></th><th>Show's the bot's version, dependencies and memory usage.</th></tr>
+	<tr><th>invite</th><th></th><th>Generates a discord invite link to add the bot to your server.</th></tr>
+	<tr><th>help</th><th></th><th>Shows links to the bot's help page, terms of service and others.</th></tr>
+	<!--<tr><th>instagram</th><th>Link</th><th>Downloads the image or video in the provided Instragram link.</th></tr></hidden>-->
 	<!--<tr><th>capture</th><th>Webpage</th><th>Takes a screenshot of a page.</th></tr></hidden>-->
-    <tr><th>clima</th><th>City</th><th>Returns the current weather in the city.</th></tr>
-    <tr><th>embed</th><th>Options</th><th>Creates a personalized "embed".</th></tr>
-    <tr><th>getmap</th><th>* (all) or name</th><th>Searches for and lists the maps used in the SvB TF2 server.</th></tr>
-    <tr><th>echo</th><th>[object Object]</th><th>[object Object]</th></tr>
-    <tr><th>crypto</th><th>Quantity</th><th>Generates a string with random letters and numbers.</th></tr>
-    <tr><th>ping</th><th></th><th>Returns the bot's latency.</th></tr>
-    <tr><th>say</th><th>Text</th><th>Prints the provided text in an embed.</th></tr>
-    <tr><th>math</th><th>Equation</th><th>Calculates the provided math equation.</th></tr>
-    <tr><th>convert</th><th>CurrencyA CurrencyB Value</th><th>Converts the Value from CurrencyA to CurrencyB.</th></tr>
-    <tr><th>convertbtc</th><th>CryptoCurrency Currency Value</th><th>Converts the value from the crypto-currency to real currency.</th></tr>
-    <tr><th>time</th><th></th><th>Returns the bot's local time.</th></tr>
+	<tr><th>clima</th><th>City</th><th>Returns the current weather in the city.</th></tr>
+	<tr><th>embed</th><th>Options</th><th>Creates a personalized "embed".</th></tr>
+	<tr><th>getmap</th><th>* (all) or name</th><th>Searches for and lists the maps used in the SvB TF2 server.</th></tr>
+	<tr><th>echo</th><th>[object Object]</th><th>[object Object]</th></tr>
+	<tr><th>crypto</th><th>Quantity</th><th>Generates a string with random letters and numbers.</th></tr>
+	<tr><th>ping</th><th></th><th>Returns the bot's latency.</th></tr>
+	<tr><th>say</th><th>Text</th><th>Prints the provided text in an embed.</th></tr>
+	<tr><th>math</th><th>Equation</th><th>Calculates the provided math equation.</th></tr>
+	<tr><th>convert</th><th>CurrencyA CurrencyB Value</th><th>Converts the Value from CurrencyA to CurrencyB.</th></tr>
+	<tr><th>convertbtc</th><th>CryptoCurrency Currency Value</th><th>Converts the value from the crypto-currency to real currency.</th></tr>
+	<tr><th>time</th><th></th><th>Returns the bot's local time.</th></tr>
 	<tr><th>ddg</th><th>Content</th><th>Searches for the content through duckduckgo.</th></tr>
 	<tr><th>valvedev</th><th>Content</th><th>Searches for the content in the Valve Developer Community wiki.</th></tr>
 	<tr><th>discordstatus</th><th></th><th>Returns discord's status.</th></tr>
@@ -58,3 +58,30 @@
 	<tr><th>searx</th><th>Content</th><th>Searches for the content using SearX.</th></tr>
 	<tr><th>image</th><th>Content</th><th>Searches for the content using SearX Images.</th></tr>
 </table>
+
+<h4 id="image">Image</h4>
+<table>
+	<tr><th>Command</th><th>Arguments</th><th>Description</th></tr>
+	<tr><th>invert</th><th>Mention or Image or ID</th><th>Invert the image's colors.</th></tr>
+	<tr><th>greyscale</th><th>Mention or Image or ID</th><th>Turns an image into grayscale.</th></tr>
+	<tr><th>flip</th><th>Mention or Image or ID</th><th>Inverts the image horizontally.</th></tr>
+	<tr><th>flipv</th><th>Mention or Image or ID</th><th>Inverts the image vertically.</th></tr>
+	<tr><th>rotate</th><th>Mention or Image or ID</th><th>Description</th></tr>
+	<tr><th>crop</th><th>Mention or Image or ID</th><th>Description</th></tr>
+	<tr><th>fade</th><th>Mention or Image or ID</th><th>Description</th></tr>
+	<tr><th>blur</th><th>Mention or Image or ID</th><th>Blurs the image.</th></tr>
+	<tr><th>write</th><th>Mention or Image or ID Message</th><th>Writes a message on the image.</th></tr>
+	<tr><th>resize</th><th>Mention or Image or ID W H</th><th>Changes the image's resolution to W x H.</th></tr>
+	<tr><th>emoji</th><th>Link Name</th><th>Creates an emoji.</th></tr>
+</table>
+
+<h4 id="steam">Steam</h4>
+<table>
+	<tr><th>Command</th><th>Arguments</th><th>Description</th></tr>
+	<tr><th>steam</th><th>Link or ID</th><th>Prints information about the provided Steam account.</th></tr>
+	<tr><th>steamfriends</th><th>Link or ID</th><th>Prints a list of banned users in the provided Steam account's friends list.</th></tr>
+	<tr><th>workshop</th><th>Link or ID</th><th>Prints information about the provided Steam workshop item.</th></tr>
+	<tr><th>steamdownload</th><th></th><th>Send the steam database in the chat.</th></tr>
+</table>
+
+<hr>
