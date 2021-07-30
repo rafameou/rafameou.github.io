@@ -1,27 +1,36 @@
-<h1>Ayahuasca Bot</h1>
+<h1>Ayahuasca 2</h1>
 <i>Work In Progress.</i><br>
 <img src="wip.png" alt="Stolen from Yume 2kki, go check the game out, it's pretty good.">
 <hr>
 
 <a href="#faq">FAQ</a><br>
-<a href="#wiab">	- What is ayahuasca bot?</a><br>
-<a href="#wdtncf">	- Where does the name come from?</a><br>
-<a href="#hciitbtms">	- How can I invite the bot to my server?</a><br>
-<a href="#wdtbs">	- Does the bot store any type of data (messages, images, etc)?</a><br>
+<a href="#wiab">	---- What is Ayahuasca 2?</a><br>
+<a href="#wdtncf">	---- Where does the name come from?</a><br>
+<a href="#hciitbtms">	---- How can I invite the bot to my server?</a><br>
+<a href="#wdtbs">	---- Does the bot store any type of data (messages, images, etc)?</a><br>
+<a href="#wwyrtsc">	---- When are you going to release the source code?</a><br>
+<a href="#inmh">	---- I need more help/Where can I check the updates.</a><br>
 <a href="#cmd">Commands</a><br>
-<a href="#utility">	- Utility</a><br>
+<a href="#utility">	---- Utility</a><br>
+<a href="#image">	---- Image</a><br>
+<a href="#steam">	---- Steam</a><br>
+<a href="#dependencies">Thanks</a>
 
 <hr>
 
 <h3 id="faq">FAQ</h3>
-<h4 id="wiab">What is ayahuasca bot?</h4>
-<p>Ayahuasca is a simple discord bot that is not focused on being better or replacing others, just a small project to waste your and my time meanwhile having fun.</p>
+<h4 id="wiab">What is Ayahuasca 2?</h4>
+<p>Ayahuasca 2 is a simple discord bot made with <a href="https://nodejs.org/en/">NodeJS</a> and <a href="https://www.npmjs.com">Node Package Manager</a> that is not focused on being better or replacing others, just a small project to waste your and my time meanwhile having fun.</p>
 <h4 id="wdtncf">Where does the name come from?</h4>
 <p>The name ayahuasca comes from a south american psychoactive brew that can cause psychedelic effects and is used as a spiritual medicine by the indigenous peoples and other religions, you can read more about it <a href="https://en.wikipedia.org/wiki/Ayahuasca">here</a>. And no, I have never used it, but I think it's a beautiful example of culture, specially of south america.</p>
 <h4 id="hciitbtms">How can I invite the bot to my server?</h4>
 <p>You can invite the bot clicking on this <a href="https://discord.com/api/oauth2/authorize?client_id=376358904252334080&permissions=0&scope=bot">link</a>, you may need to login into your discord account. Please note that i'm currently hosting the bot on a Raspberry PI 3B, so it is little bit slow.</p>
 <h4 id="wdtbs">Does the bot store any type of data (messages, images, etc)?</h4>
-<p>No, but yes. The bot will store images that are used with the <a href="#image">image commands</a> and discard all at 3PM UTC, user ids will also be stored for the <a href="#economy">economy commands</a>. Messages and other data will be always discarded after the command function has finished. However since the bot is currently closed-source and running on my own server, you will have to take my word for it.</p>
+<p>The bot will store images that are used with the <a href="#image">image commands</a> and discard all at 3PM UTC, user ids will also be stored for the <a href="#economy">economy commands</a>. Messages and other data will be always discarded after the command function has finished. However since the bot is currently closed-source and running on my own server, you will have to take my word for it.</p>
+<h4 id="wwyrtsc">When are you going to release the source code?</h4>
+<p>Probably after I finish fixing most of the problems and start rewriting the code in <a href="https://www.rust-lang.org/">Rust</a> or maybe another language.</p>
+<h4 id="inmh">I need more help/Where can I check the updates.</h4>
+<p>Join my server using this invite <strong>R3pXgBN</strong> (discord.com/invite/ ←put the code here).</p>
 
 <hr>
 
@@ -84,4 +93,53 @@
 	<tr><th>steamdownload</th><th></th><th>Send the steam database in the chat.</th></tr>
 </table>
 
+<hr>
+
+<h3 id="dependencies">Huge thanks to</h3>
+<p>	- Snoivo for translating most of the commands.<br>
+	- Arthurdead and Mathx for helping me with most of the code.<br>
+	- <a href="https://github.com/rafaelrc7">Rafael</a> for saying that JavaScript is garbage and I should switch to C.<br>
+	- People that use my bot.<br>
+	- Other people that I forgot to mention.<br>
+	- Everyone who made these amazing libraries: <br>
+<a href="https://www.npmjs.com/@gumlet/gif-resize">@gumlet/gif-resize (^1.3.0)</a><br>
+<a href="https://www.npmjs.com/@node-steam/id">@node-steam/id (^1.1.0)</a><br>
+<a href="https://www.npmjs.com/axios">axios (^0.21.1)</a><br>
+<a href="https://www.npmjs.com/bitcoin-exchange-rate">bitcoin-exchange-rate (^1.3.3)</a><br>
+<a href="https://www.npmjs.com/bitcoin-units">bitcoin-units (^0.3.0)</a><br>
+<a href="https://www.npmjs.com/booru">booru (^2.4.0)</a><br>
+<a href="https://www.npmjs.com/chalk">chalk (^4.1.0)</a><br>
+<a href="https://www.npmjs.com/crypto-price">crypto-price (0.0.6)</a><br>
+<a href="https://www.npmjs.com/discord.js">discord.js (^12.5.1)</a><br>
+<a href="https://www.npmjs.com/dotenv">dotenv (^8.2.0)</a><br>
+<a href="https://www.npmjs.com/e6api">e6api (^1.0.16)</a><br>
+<a href="https://www.npmjs.com/e9api">e9api (^1.0.13)</a><br>
+<a href="https://www.npmjs.com/exchange-rates">exchange-rates (^0.1.2)</a><br>
+<a href="https://www.npmjs.com/exchange-rates-api">exchange-rates-api (^1.0.2)</a><br>
+<a href="https://www.npmjs.com/fs-extra">fs-extra (^9.1.0)</a><br>
+<a href="https://www.npmjs.com/gifsicle">gifsicle (^5.1.0)</a><br>
+<a href="https://www.npmjs.com/image-type">image-type (^4.1.0)</a><br>
+<a href="https://www.npmjs.com/jimp">jimp (^0.16.1)</a><br>
+<a href="https://www.npmjs.com/jstf">jstf (^0.9.10)</a><br>
+<a href="https://www.npmjs.com/lets-get-meta">lets-get-meta (^2.1.1)</a><br>
+<a href="https://www.npmjs.com/line-reader">line-reader (^0.4.0)</a><br>
+<a href="https://www.npmjs.com/lowdb">lowdb (^1.0.0)</a><br>
+<a href="https://www.npmjs.com/mathjs">mathjs (^9.2.0)</a><br>
+<a href="https://www.npmjs.com/moment">moment (^2.29.1)</a><br>
+<a href="https://www.npmjs.com/moment-duration-format">moment-duration-format (^2.3.2)</a><br>
+<a href="https://www.npmjs.com/money">money (^0.2.0)</a><br>
+<a href="https://www.npmjs.com/node-cron">node-cron (^2.0.3)</a><br>
+<a href="https://www.npmjs.com/node-duckduckgo">node-duckduckgo (^2.0.15)</a><br>
+<a href="https://www.npmjs.com/nodemon">nodemon (^2.0.7)</a><br>
+<a href="https://www.npmjs.com/query-string">query-string (^6.14.0)</a><br>
+<a href="https://www.npmjs.com/querystring">querystring (^0.2.0)</a><br>
+<a href="https://www.npmjs.com/r2">r2 (^2.0.1)</a><br>
+<a href="https://www.npmjs.com/random-js">random-js (^2.1.0)</a><br>
+<a href="https://www.npmjs.com/read-chunk">read-chunk (^3.2.0)</a><br>
+<a href="https://www.npmjs.com/readline-sync">readline-sync (^1.4.10)</a><br>
+<a href="https://www.npmjs.com/request">request (^2.88.2)</a><br>
+<a href="https://www.npmjs.com/steam-workshop">steam-workshop (0.0.5)</a><br>
+<a href="https://www.npmjs.com/steamapi">steamapi (^2.1.2)</a><br>
+<a href="https://www.npmjs.com/stock-info">stock-info (^1.2.0)</a><br>
+<a href="https://www.npmjs.com/validator">validator (^13.5.2)</a><br>
 <hr>
