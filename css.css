@@ -1,0 +1,18 @@
+body {
+  background-image: url("img/sky-bk-005.jpeg");
+  background-repeat: repeat;
+}
+
+h1 {
+  
+}
+
+p {
+  background-color: white;
+  opacity: 0.7;
+  padding: 2px 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2px 2px;
+}
