@@ -1,18 +1,70 @@
 body {
-  background-image: url("img/sky-bk-005.jpeg");
-  background-repeat: repeat;
-}
-
-h1 {
-  
+	background-image: url("img/sky-bk-005.jpeg");
+	background-repeat: repeat;
+	font-family: Arial, sans-serif;	
 }
 
 p {
-  background-color: white;
-  opacity: 0.7;
-  padding: 2px 2px;
-  border: 1px solid black;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 2px 2px;
+	text-align:justify;
+	overflow: auto;
+}
+
+hr {
+	border: 2px solid rgb(213, 196, 161);
+	border-radius:50%;
+}
+
+.cud {
+	position: fixed; 
+	bottom: 0; 
+	float:left; 
+	width:5%;
+	content: url("img/CuddlesSittingFromBehindHS33.png");
+}
+
+.def {
+	width: auto; 
+	height: auto; 
+	background-color: rgba(50, 48, 47, 0.8);
+	color: rgb(213, 196, 161);
+	padding: 20px;
+	display: flex;
+	box-shadow: 5px 5px 5px black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.blog {
+	width: auto;
+	height: auto; 
+	background-color: rgba(50, 48, 47, 0.90);
+	color: rgb(213, 196, 161);
+	padding: 20px;
+	display: flex;
+	box-shadow: 5px 5px 5px black;
+	margin-top:2%;
+	margin-bottom:2%;
+	margin-left:5%;
+	margin-right:5%;
+}
+
+.cen {
+	text-align: center;
+}
+
+.btn {
+  background-color: rgba(50, 48, 47, 1);
+  color: rgb(213, 196, 161);
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.btn:hover {
+  background-color: rgb(213, 196, 161);
+  color: rgb(50, 48, 47);
+  padding: 5px;
 }
