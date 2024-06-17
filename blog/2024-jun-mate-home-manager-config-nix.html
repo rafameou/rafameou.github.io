@@ -16,10 +16,10 @@
 				This post is inspired by <a href="https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/">Declarative GNOME configuration with NixOS</a>.<br><br>
 				To follow this small tutorial you need to have <a href="https://wiki.nixos.org/wiki/Home_manager">home-manager</a> installed.
 
-				In home-manager you can set dconf values, we can use this option to setup almost everything on mate.<br>
+				In home-manager you can set dconf values with <code>dconf.settings</code>, we can use this option to setup almost everything on MATE.<br>
 
 				<h2>Themes and Icons</h2>
-				You can check the names by applying it using mate's appearance settings.
+				You can check the names by applying it using MATE's appearance settings.
 				<pre><code>
 "org/mate/desktop/interface" = {
 	gtk-theme = "menta";
@@ -32,7 +32,7 @@
 				You can also set the background from here:
 				<pre><code>
 "org/mate/desktop/background" = {
-        picture-filename = config.stylix.image; 
+        picture-filename = "/path/to/image.png"; 
 };
 				</code></pre>
 				Marco's configuration (the window manager) is separated from this.
@@ -43,9 +43,10 @@
 };
 				</code></pre>
 				<h2>Mate's Terminal</h2>
-				Colors need to be in hex format with #, example: #RRGGBB.<br>
-				Opacity should be set in <code>background-darkness</code>.<br>
-				Pallete is setup in a different way, separating using :, in order: white,red,green,yellow,blue,magenta,cyan,black,white2,bright-red,bright-green,bright-yellow,bright-blue,bright-cyan,black2. If you use stylix you can copy the order from <a href="https://github.com/danth/stylix/blob/master/modules/console/nixos.nix#L9-L25">console's home-manager file</a>.
+				Colors need to be in hex format with #, example: #RRGGBB.<br><br>
+				Opacity should be set in <code>background-darkness</code>.<br><br>
+				Pallete is configured in a different way, separated using :, in order:<br><code>white:red:green:yellow:blue:magenta:cyan:black:white2:bright-red:bright-green:bright-yellow:bright-blue:bright-cyan:black2</code><br><br>
+				If you use stylix you can copy the order from <a href="https://github.com/danth/stylix/blob/master/modules/console/nixos.nix#L9-L25">console's home-manager file</a>:<br><code>"${base00}:${red}:${green}:${yellow}:${blue}:${magenta}:${cyan}:${base05}:${base03}:${bright-red}:${bright-green}:${yellow}:${bright-blue}:${bright-cyan}:${base06}"</code>.
 				<pre><code>
 "org/mate/terminal/profiles/default" = {
 	background-color = "#000000";
@@ -58,7 +59,7 @@
 };
 				</code></pre>
 				<h2>Shortcuts</h2>
-				To edit this easily, download <code>dconf-editor</code> from nixpkgs, edit the shortcuts using <code>mate-keybinding-properties</code> and check the new entries in dconf.<br>
+				To edit this easily, download <code>dconf-editor</code> from nixpkgs, edit the shortcuts using <code>mate-keybinding-properties</code> and check the new entries in dconf.<br><br>
 				<code>&lt;Mod4></code> is the super key, everything else have common names.
 				<pre><code>
 "org/mate/marco/global-keybindings" = {
@@ -98,7 +99,7 @@
         type = "image";
 };
 				</code></pre>
-				Well, let's go to the annoying part, editing the panel's objects.<br>
+				Well, let's go to the annoying part, editing the panel's objects.<br><br>
 				First we need to setup the applet and launcher ids. This is just an example, I recommend you naming every single applet and launcher.
 				<pre><code>
 "org/mate/panel/general" = {
@@ -157,7 +158,7 @@
 				</code></pre>
 				To edit objects from the bottom panel just change <code>toplevel-id</code> to <code>"bottom"</code>.
 				<h2>Ayatana Indicators</h2>
-				The indicators used on Ubuntu Mate can also be setup on NixOS, the pros being that evolution and thunderbird's events will show on the time applet.<br>
+				The indicators used on Ubuntu Mate can also be setup on NixOS, the pros being that evolution and thunderbird's events will show on the time applet.<br><br>
 				First we need to enable this service on nixos (not home-manager), make sure to add every indicator you want into the <code>packages</code> option.
 				<pre><code>
 services.ayatana-indicators = {
@@ -203,7 +204,7 @@ let autostartString = (val: ''
       Name=${val}
       X-MATE-Autostart-Delay=2
 '');
-"autostart/thunderbird.desktop".text = autostartString "thunderbird"; 
+xdg.configFile."autostart/thunderbird.desktop".text = autostartString "thunderbird"; 
 				</code></pre>
 				<hr>
 			</div>
