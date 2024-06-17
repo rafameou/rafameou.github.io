@@ -10,16 +10,16 @@
 			<div>
 				<h1>Declarative MATE configuration using NixOS</h1>
 				MATE 1.28.2, last update on 16/06/2024.<br>
-				<i>Warning: this post is a stub, loads of gramatical errors, sorry about that.</i><br>
+				<i>Warning: this post is a stub and contains loads of gramatical errors. I'm sorry about that.</i><br>
 				<img src="../img/wip.png" alt="Stolen from Yume 2kki, go check the game out, it's pretty good.">
 				<hr>
 				This post is inspired by <a href="https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/">Declarative GNOME configuration with NixOS</a>.<br><br>
-				To follow this small tutorial you need to have <a href="https://wiki.nixos.org/wiki/Home_manager">home-manager</a> installed.
+				To follow this simple tutorial, you need to have <a href="https://wiki.nixos.org/wiki/Home_manager">home-manager</a> installed.
 
-				In home-manager you can set dconf values with <code>dconf.settings</code>, we can use this option to setup almost everything on MATE.<br>
+				With home-manager you can set dconf values with <code>dconf.settings</code>, we can use this option to setup almost everything on MATE.<br>
 
-				<h2>Themes and Icons</h2>
-				You can check the names by applying it using MATE's appearance settings.
+				<h2>Themes and icons</h2>
+				You can check the names by applying them using MATE's appearance settings.
 				<pre><code>
 "org/mate/desktop/interface" = {
 	gtk-theme = "menta";
@@ -35,18 +35,18 @@
         picture-filename = "/path/to/image.png"; 
 };
 				</code></pre>
-				Marco's configuration (the window manager) is separated from this.
+				The window manager configuration, called "Marco", is separated from this.
 				<pre><code>
 "org/mate/marco/general" = {
 	theme = "menta";
 	titlebar-uses-system-font = false; 
 };
 				</code></pre>
-				<h2>Mate's Terminal</h2>
-				Colors need to be in hex format with #, example: #RRGGBB.<br><br>
-				Opacity should be set in <code>background-darkness</code>.<br><br>
-				Pallete is configured in a different way, separated using :, in order:<br><code>white:red:green:yellow:blue:magenta:cyan:black:white2:bright-red:bright-green:bright-yellow:bright-blue:bright-cyan:black2</code><br><br>
-				If you use stylix you can copy the order from <a href="https://github.com/danth/stylix/blob/master/modules/console/nixos.nix#L9-L25">console's home-manager file</a>:<br><code>"${base00}:${red}:${green}:${yellow}:${blue}:${magenta}:${cyan}:${base05}:${base03}:${bright-red}:${bright-green}:${yellow}:${bright-blue}:${bright-cyan}:${base06}"</code>.
+				<h2>Mate's terminal</h2>
+				Colors need to be in hex format with #. For example: #00FF00 (#RRGGBB; in this case, it's lime green).<br><br>
+				Opacity should be set with <code>background-darkness</code>.<br><br>
+				The palette is configured in a different way: it's separated with colons, and uses the following order:<br><code>white:red:green:yellow:blue:magenta:cyan:black:white2:bright-red:bright-green:bright-yellow:bright-blue:bright-cyan:black2</code><br><br>
+				If you use stylix you can copy the order from the <a href="https://github.com/danth/stylix/blob/master/modules/console/nixos.nix#L9-L25">console's home-manager file</a>:<br><code>"${base00}:${red}:${green}:${yellow}:${blue}:${magenta}:${cyan}:${base05}:${base03}:${bright-red}:${bright-green}:${yellow}:${bright-blue}:${bright-cyan}:${base06}"</code>.
 				<pre><code>
 "org/mate/terminal/profiles/default" = {
 	background-color = "#000000";
@@ -60,7 +60,7 @@
 				</code></pre>
 				<h2>Shortcuts</h2>
 				To edit this easily, download <code>dconf-editor</code> from nixpkgs, edit the shortcuts using <code>mate-keybinding-properties</code> and check the new entries in dconf.<br><br>
-				<code>&lt;Mod4></code> is the super key, everything else have common names.
+				<code>&lt;Mod4></code> is the Super key; everything else has common names.
 				<pre><code>
 "org/mate/marco/global-keybindings" = {
 	panel-run-dialog = "&lt;Mod4>d";
@@ -70,7 +70,7 @@
         switch-to-workspace-4 = "&lt;Mod4>4";
 };
 				</code></pre>
-				Marco's shortcuts are separated as well.
+				The shortcuts from the Marco (the window manager) are separated as well.
 				<pre><code>
 "org/mate/marco/window-keybindings" = {
         close = "&lt;Shift>&lt;Mod4>q";
@@ -86,7 +86,7 @@
 };
 				</code></pre>
 				<h2>Panel</h2>
-				We can edit some simple panel settings, check <code>dconf-editor</code> for more options:
+				We can edit some basic panel settings. Check <code>dconf-editor</code> for more options:
 				<pre><code>
 "org/mate/panel/toplevels/top/background" = {
 	auto-hide = false;
@@ -99,8 +99,8 @@
         type = "image";
 };
 				</code></pre>
-				Well, let's go to the annoying part, editing the panel's objects.<br><br>
-				First we need to setup the applet and launcher ids. This is just an example, I recommend you naming every single applet and launcher.
+				Well, let's go to the annoying part: editing the panel's objects.<br><br>
+				First, we need to setup the applet and launcher IDs. The following is just an example; I recommend you give a name to every single applet and launcher.
 				<pre><code>
 "org/mate/panel/general" = {
         "object-id-list" =  [
@@ -114,7 +114,7 @@
 			];
 };
 				</code></pre>
-				The first applet is the <code>menu-bar</code>, it is not considered an applet, so the <code>object-type</code> is set to <code>menu-bar</code>. 
+				The first applet is the <code>menu-bar</code>. It is not considered an applet, so the <code>object-type</code> is set to <code>menu-bar</code>.
 				<pre><code>
 "org/mate/panel/objects/menu-bar" = { 
         locked = true;
@@ -124,14 +124,14 @@
         toplevel-id = "top";
 };
 				</code></pre>
-				We also can also change the <code>icon-name</code>, make sure to set it to the nice nix snowflake :). Note that this path will not change if you rename the <code>menu-bar</code> object name.
+				We also can also change the <code>icon-name</code>. Just make sure to set it to the nice nix snowflake :). Note that this path will not change if the object name of <code>menu-bar</code> is altered.
 				<pre><code>
 "org/mate/panel/menubar" = {
         show-icon = true;
         icon-name = "nix-snowflake"; 
 };
 				</code></pre>
-				The second applet is a launcher, it's also not considered as an applet. Note we jump the postition from 1, we can keep implementing this number to get each object it's location. <code>launcher-location</code> can just be the application desktop file name, you don't need to send it's entire path.
+				The second applet is a launcher. It's also not considered an applet. Note that we have incremented the position from 1; we can keep increasing this number to get each object's location. <code>launcher-location</code> can just be the application desktop file name; you don't need to send its entire path.
 				<pre><code>
 "org/mate/panel/objects/mate-screenshot" = {
         launcher-location = "mate-screenshot.desktop"; 
@@ -141,7 +141,7 @@
         toplevel-id = "top";
 };
 				</code></pre>
-				Now we can check the first real applet. This time we need to set <code>applet-iid</code>, again, the easiest way is to add the applet into the panel and check how we should set it's values. Note how we now have changed <code>panel-right-stick</code> into true, this will change the location of the object, it's now on the right, the most-right object is 0.
+				Now we can check the first real applet. This time we need to set <code>applet-iid</code>; again, the easiest way is to add the applet into the panel and check how we should set its values. Note that since we have changed <code>panel-right-stick</code> to <code>true</code>, this will change the location of the object: it's now on the right, and the rightmost object is 0.
 				<pre><code>
 "org/mate/panel/objects/sensors-applet" = {
         locked = true;
@@ -152,14 +152,14 @@
         toplevel-id = "top";
 };
 				</code></pre>
-				Inside the <code>prefs</code> folder we can find configuration values for most applets.
+				Inside the <code>prefs</code> folder, we can find the configuration values for most applets.
 				<pre></code>
 "org/mate/panel/objects/sensors-applet/prefs".timeout-delay = 5000; 
 				</code></pre>
-				To edit objects from the bottom panel just change <code>toplevel-id</code> to <code>"bottom"</code>.
-				<h2>Ayatana Indicators</h2>
-				The indicators used on Ubuntu Mate can also be setup on NixOS, the pros being that evolution and thunderbird's events will show on the time applet.<br><br>
-				First we need to enable this service on nixos (not home-manager), make sure to add every indicator you want into the <code>packages</code> option.
+				To edit objects from the bottom panel, you just need to change <code>toplevel-id</code> to <code>"bottom"</code>.
+				<h2>Ayatana indicators</h2>
+				The indicators used on Ubuntu Mate can also be setup on NixOS; the pros being that events from Evolution and Thunderbird will show on the time applet.<br><br>
+				First, we need to enable this service on nixos (not home-manager), so make sure to add every indicator you want into the <code>packages</code> option.
 				<pre><code>
 services.ayatana-indicators = {
     enable = true;
@@ -174,7 +174,7 @@ services.ayatana-indicators = {
     ];
 };
 				</code></pre>
-				Going back to home-manager we can configure the indicator applet.
+				Going back to home-manager we can now configure the indicator applet.
 				<pre><code>
 "org/mate/panel/objects/ayatana-indicator-full" = {
         locked = true;
@@ -185,7 +185,7 @@ services.ayatana-indicators = {
         toplevel-id = "top";
 };
 				</code></pre>
-				Sadly nix currently doesn't package <code>ayatana-settings</code>, we need to check each gsettings from it's Github repository. But they can be configured from dconf:
+				Sadly nix currently doesn't package <code>ayatana-settings</code>, so we need to check each gsettings from its GitHub repository. However, they can be configured from dconf:
 				<pre><code>
 "org/ayatana/indicator/datetime" = { 
         show-seconds = true;
@@ -194,7 +194,7 @@ services.ayatana-indicators = {
 };
 				</code></pre>
 				<h2>Autostart</h2>
-				Mate uses XDG's autostart specification, you can just copy application desktop files into <code>~/.config/autostart</code> or create a simple function to do that:
+				Mate uses XDG's autostart specification; you can just copy application desktop files inside <code>~/.config/autostart</code> or create a simple function to do that:
 				<pre><code>
 let autostartString = (val: '' 
       [Desktop Entry]
@@ -207,6 +207,7 @@ let autostartString = (val: ''
 xdg.configFile."autostart/thunderbird.desktop".text = autostartString "thunderbird"; 
 				</code></pre>
 				<hr>
+				<small>Thank you, <a href="https://github.com/Tiagoquix">Tiagoquix</a>, for proofreading my text.</small>
 			</div>
 		</div>
 	</body>
