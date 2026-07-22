@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1784740694|47704554';
+const CACHE_VERSION = '1784740856|210249536';
 /** @type {string} */
 const CACHE_PREFIX = 'Rotina do Bem-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
